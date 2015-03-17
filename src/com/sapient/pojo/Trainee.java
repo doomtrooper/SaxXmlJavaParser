@@ -1,5 +1,7 @@
 package com.sapient.pojo;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Trainee {
@@ -69,10 +71,14 @@ public class Trainee {
 	}
 	@Override
 	public String toString() {
+		//for changing the date format i.e. trimming the time attribute.
+		DateFormat outputFormatter = new SimpleDateFormat("MM/dd/yyyy");
+		String outputDate = outputFormatter.format(getTraineeJoinDate()); // Output : 01/20/2012
+		
 		return "Trainee [traineeName=" + traineeName + ", traineeContact="
 				+ traineeContact + ", traineeCurAddr=" + traineeCurAddr
 				+ ", traineePerAddr=" + traineePerAddr + ", traineeStream="
-				+ traineeStream + ", traineeJoinDate=" + traineeJoinDate
+				+ traineeStream + ", traineeJoinDate=" + outputDate
 				+ ", traineeScore=" + traineeScore + "]";
 	}
 	

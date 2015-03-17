@@ -1,5 +1,7 @@
 package com.sapient.xmlparsing;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -70,6 +72,14 @@ public class XMLReader extends DefaultHandler {
 			tempTrainee.setTraineeScore(Integer.parseInt(temp));			
 		}else if (qName.equalsIgnoreCase("dateofjoining")) {
 			//Don't Know what to do :/ :(
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+			try {
+				Date date = formatter.parse(temp);
+				tempTrainee.setTraineeJoinDate(date);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	}
