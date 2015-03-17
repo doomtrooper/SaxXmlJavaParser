@@ -6,7 +6,7 @@
 	<xs:element name="sapient-gmi">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="trainee" type="TraineeInfo" minOccurs="1" />
+				<xs:element name="trainee" type="TraineeInfo" minOccurs="1" maxOccurs="unbounded" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -39,7 +39,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="address" type="AddressInfo" maxOccurs="1"
+			<xs:element name="address" type="AddressInfo" maxOccurs="2"
 				minOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
@@ -99,5 +99,3 @@
 	</xs:complexType>
 
 </xs:schema>
-
-<!-- Not working(XML and XSD validation) XSD :( :( -->
