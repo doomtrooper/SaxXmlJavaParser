@@ -36,6 +36,8 @@ public class XMLReader extends DefaultHandler {
 			addr=new Address();
 			addrType="";
 			addrType=attributes.getValue("type");
+			//looking for the error
+			/*System.out.println(addrType);*/
 		}
 	}
 	
@@ -61,7 +63,7 @@ public class XMLReader extends DefaultHandler {
 		}else if (qName.equalsIgnoreCase("address") && addrType.equalsIgnoreCase("current")) {
 			tempTrainee.setTraineeCurAddr(addr);
 		}else if (qName.equalsIgnoreCase("address") && addrType.equalsIgnoreCase("permanent")) {
-			tempTrainee.setTraineeCurAddr(addr);
+			tempTrainee.setTraineePerAddr(addr);
 		}else if (qName.equalsIgnoreCase("stream")) {
 			tempTrainee.setTraineeStream(temp);			
 		}else if (qName.equalsIgnoreCase("score")) {
