@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sapient-gmi>
+	<trainee>
+		<personal-details>
+			<name>Anand</name>
+			<contact>8010140081</contact>
+			<address type="current">
+				<housenumber>96</housenumber>
+				<street>7</street>
+				<city>Gurgaon</city>
+			</address>
+			<address type="permanent">
+				<housenumber>96</housenumber>
+				<street>7</street>
+				<city>Gurgaon</city>
+			</address>
+		</personal-details>
+		<training-details>
+			<stream>Java</stream>
+			<dateofjoining>2015-01-05</dateofjoining>
+			<score>77</score>
+		</training-details>
+	</trainee>
+
+	<trainee>
+		<personal-details>
+			<name>Mounik</name>
+			<contact>9999999999</contact>
+			<address type="current">
+				<housenumber>96</housenumber>
+				<street>7</street>
+				<city>Gurgaon</city>
+			</address>
+			<address type="permanent">
+				<housenumber>96</housenumber>
+				<street>7</street>
+				<city>Gurgaon</city>
+			</address>
+		</personal-details>
+		<training-details>
+			<stream>Java</stream>
+			<dateofjoining>2015-01-15</dateofjoining>
+			<score>99</score>
+		</training-details>
+	</trainee>
+</sapient-gmi>
