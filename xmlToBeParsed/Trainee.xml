@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sapient-gmi>
+<sapient-gmi xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.w3schools.com Trainee.xsd ">
 	<trainee>
 		<personal-details>
 			<name>Anand</name>
