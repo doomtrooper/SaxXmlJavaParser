@@ -74,7 +74,7 @@ public class XMLReader extends DefaultHandler {
 			//Don't Know what to do :/ :(
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 			try {
-				Date date = formatter.parse(temp);
+				date = formatter.parse(temp);
 				tempTrainee.setTraineeJoinDate(date);
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
