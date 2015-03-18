@@ -20,29 +20,32 @@ import com.sapient.xmlparsing.XMLReader;
 
 public class RunParser {
 	public static void main(String[] args) throws IOException, SAXException,
-    ParserConfigurationException{
-		//Create a "parser factory" for creating SAX parsers
-        SAXParserFactory spfac = SAXParserFactory.newInstance();
-        Source xmlFile = new StreamSource(new File("xmlToBeParsed/Trainee.xml"));
-        SchemaFactory schemaFactory = SchemaFactory
-            .newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-        Schema schema = schemaFactory.newSchema(new File("xmlToBeParsed/Trainee.xsd"));
-        Validator validator = schema.newValidator();
-        validator.setErrorHandler(new XMLErrorHandler());
-        try {
-          validator.validate(xmlFile);
-          //System.out.println(xmlFile.getSystemId() + " is valid");
-        //Now use the parser factory to create a SAXParser object
-          SAXParser sp = spfac.newSAXParser();
+			ParserConfigurationException {
+		// Create a "parser factory" for creating SAX parsers
+		SAXParserFactory spfac = SAXParserFactory.newInstance();
+		Source xmlFile = new StreamSource(new File("xmlToBeParsed/Trainee.xml"));
+		SchemaFactory schemaFactory = SchemaFactory
+				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		Schema schema = schemaFactory.newSchema(new File(
+				"xmlToBeParsed/Trainee.xsd"));
+		Validator validator = schema.newValidator();
+		validator.setErrorHandler(new XMLErrorHandler());
+		try {
+			validator.validate(xmlFile);
+			// System.out.println(xmlFile.getSystemId() + " is valid");
+			// Now use the parser factory to create a SAXParser object
+			SAXParser sp = spfac.newSAXParser();
 
-          //Create an instance of this class; it defines all the handler methods
-          XMLReader reader = new XMLReader();
-          //Finally, tell the parser to parse the input and notify the handler
-          
-          sp.parse("xmlToBeParsed/Trainee.xml", reader);
-          reader.displayList();
-        } catch (SAXException e) {
-          System.out.println(xmlFile.getSystemId() + " is NOT valid");
-        }
+			// Create an instance of this class; it defines all the handler
+			// methods
+			XMLReader reader = new XMLReader();
+			// Finally, tell the parser to parse the input and notify the
+			// handler
+
+			sp.parse("xmlToBeParsed/Trainee.xml", reader);
+			reader.displayList();
+		} catch (SAXException e) {
+			System.out.println(xmlFile.getSystemId() + " is NOT valid");
+		}
 	}
 }
